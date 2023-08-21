@@ -1,6 +1,6 @@
 .menu-container{
     display: flex;
-     flex-direction: column;
+    flex-direction: column;
 }
 .menu-title{
     display: flex;
@@ -9,12 +9,12 @@
     justify-content: space-between;
     font-size: 16px;
     font-weight: 700;
-    width: 45%;
-    margin-left: 28%;
-    margin-top: 50px;
+    width: 45vw;
+    margin-left: 28vw;
     max-height: 100px;
 }
 .menu-title-text{
+    flex:1;
     display:flex;
     flex-direction:row;
     align-items:center;
@@ -26,12 +26,16 @@
     justify-content: center;
     align-items: center;
     padding: 50px 0 50px 0;
-    margin: 25px;
     height: 50vh;
     overflow: auto;
 }
 .menu-items::-webkit-scrollbar{
     width: 0;
+}
+.button-container{
+    flex:1;
+    display: flex;
+    justify-content: flex-end;
 }
 .menu-button{
     background: black;

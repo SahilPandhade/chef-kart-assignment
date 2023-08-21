@@ -1,18 +1,21 @@
 .popular-dishes-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 28vw;
 }
 h3{
-    margin-left: -35%;
+    font-size: 20px;
+    /* margin-left: -35%; */
 }
 .dish-list {
-    /* list-style: none; */
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    gap:24px
+    /* justify-content: flex-start; */
+    gap:24px;
 }
 
 .dish-item {
@@ -20,11 +23,9 @@ h3{
     width: 100px;
     height: 100px;
     overflow: hidden;
-    border: 1px solid orangered;
+    border: 2px solid orangered;
     border-radius: 50%;
-}
-.dish-item:hover{
-    border: 1px solid orangered;
+    cursor: pointer;
 }
 .dish-image {
     width: 100%;
@@ -47,9 +48,15 @@ h3{
     justify-content: center;
     border-radius: 50%;
 }
+.dish-overlay:hover{
+    background: transparent;
+}
 .dish-name {
     color: white;
     font-size: 1rem;
     text-align: center;
     padding: 10px;
+}
+.dish-name:hover{
+    color:black
 }

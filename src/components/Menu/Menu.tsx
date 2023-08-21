@@ -12,24 +12,21 @@ const Menu = ({ dishes, loading }: { dishes: dishesProps[], loading: boolean }) 
             setCartItems((prevState)=>[...prevState, dish])
             console.log(cartItems)
         }
-        // else {
-        //     setCartItems([dish])
-        // }
     }
     const handleRemoveButton = (dish: dishesProps) => {
-        // if (cartItems) {
             const updatedCartItems = cartItems.filter(obj => obj.id !== dish.id);
             setCartItems(updatedCartItems);
-        // }
     }
     return (
         <div className='menu-container'>
             <div className="menu-title">
-                <p className='menu-title-text'>
+                <div className='menu-title-text'>
                     <p style={{ fontSize: '24px', fontWeight: '700' }}>Recommended </p>
                     <FontAwesomeIcon icon={faCaretDown} style={{ cursor: 'pointer' }} />
-                </p>
-                <button className='menu-button'>Menu</button>
+                </div>
+                <div className='button-container'>
+                    <button className='menu-button'>Menu</button>
+                </div>
             </div>
             <div className='menu-items'>
                 {
