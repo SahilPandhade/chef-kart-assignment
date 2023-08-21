@@ -14,13 +14,24 @@
     margin-top: 50px;
     max-height: 100px;
 }
+.menu-title-text{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:6px
+}
 .menu-items{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:50px;
+    padding: 50px 0 50px 0;
     margin: 25px;
+    height: 50vh;
+    overflow: auto;
+}
+.menu-items::-webkit-scrollbar{
+    width: 0;
 }
 .menu-button{
     background: black;
@@ -28,4 +39,27 @@
     width: 90px;
     height: 45px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.cart-container{
+    position: fixed;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color:#ffff;
+    padding: 5px;
+    border-radius: 8px;
+    z-index: 1;
+}
+.cart-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 4px;
+    gap:10px;
 }

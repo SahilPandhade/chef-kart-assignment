@@ -52,7 +52,7 @@ const IngredientPage = () => {
                             </div>
                             <div className='timer'>
                                 <FontAwesomeIcon icon={faClock} />
-                                <p>1 hour</p>
+                                <p>{selectedDish?.timeToPrepare}</p>
                             </div>
                         </div>
                         <img className='ingredient-banner' src={imgSrc} />
