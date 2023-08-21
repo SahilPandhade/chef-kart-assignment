@@ -5,6 +5,23 @@ import './Menu.css'
 import { dishesProps } from '../../constants/Types'
 import Dish from '../Dish/Dish'
 const Menu = ({ dishes, loading }: { dishes: dishesProps[], loading: boolean }) => {
+    const [cartItems, setCartItems] = useState<dishesProps[]>([])
+    const handleAddButton = (dish: dishesProps) => {
+        console.log(dish)
+        if ((!cartItems.some((obj) => obj.id === dish.id))) {
+            setCartItems((prevState)=>[...prevState, dish])
+            console.log(cartItems)
+        }
+        // else {
+        //     setCartItems([dish])
+        // }
+    }
+    const handleRemoveButton = (dish: dishesProps) => {
+        // if (cartItems) {
+            const updatedCartItems = cartItems.filter(obj => obj.id !== dish.id);
+            setCartItems(updatedCartItems);
+        // }
+    }
     return (
         <div className='menu-container'>
             <div className="menu-title">
@@ -18,17 +35,15 @@ const Menu = ({ dishes, loading }: { dishes: dishesProps[], loading: boolean }) 
                 {
                     dishes.map((item) => {
                         return (
-                            <Dish key={item.id} {...item} />
+                            <Dish 
+                                key={item.id} 
+                                cartItems={cartItems} 
+                                handleAddButton={handleAddButton} 
+                                handleRemoveButton={handleRemoveButton} 
+                                dish={item} />
                         )
                     })
                 }
-            </div>
-            <div className='cart-container'>
-                <div className='cart-text'>
-                    <FontAwesomeIcon icon={faBurger} />
-                    <p>2 items added to cart</p>
-                </div>
-                <FontAwesomeIcon icon={faArrowRight} style={{marginRight:'4px'}}/>
             </div>
         </div>
     )
