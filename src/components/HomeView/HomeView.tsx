@@ -7,7 +7,6 @@ import { cuisines } from '../../constants/helper';
 import { PopularDishesProps, cuisineProps, dishesProps } from '../../constants/Types';
 import PopularDishes from '../PopularDishes/PopularDishes';
 import Menu from '../Menu/Menu';
-import CartItems from '../CartItems/CartItems';
 const HomeView = () => {
     const [activeButton, setActiveButton] = useState<Number>()
     const currentDate = new Date();

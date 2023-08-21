@@ -59,7 +59,7 @@ const Dish = ({dish,cartItems,handleAddButton,handleRemoveButton}:DishProps)=>{
             {cartItems && cartItems.length > 0 && (<div className='cart-container'>
                 <div className='cart-text'>
                     <FontAwesomeIcon icon={faBurger} />
-                    <p>{Number(cartItems.length)}items added to cart</p>
+                    <p>{Number(cartItems.length)} food items selected</p>
                 </div>
                 <FontAwesomeIcon icon={faArrowRight} style={{ marginRight: '4px' }} />
             </div>)}

@@ -10,7 +10,6 @@ const Menu = ({ dishes, loading }: { dishes: dishesProps[], loading: boolean }) 
         console.log(dish)
         if ((!cartItems.some((obj) => obj.id === dish.id))) {
             setCartItems((prevState)=>[...prevState, dish])
-            console.log(cartItems)
         }
     }
     const handleRemoveButton = (dish: dishesProps) => {
