@@ -1,5 +1,5 @@
 import React from 'react'
-import { dishesProps } from '../constants/Types'
+import { dishesProps } from '../../constants/Types'
 import './Dish.css'
 import { faChevronRight, faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -18,8 +18,8 @@ const Dish: React.FC<dishesProps> = (dish) => {
             <div className="dish-details">
                 <div className='dish-title'>
                     <p>{dish.name}</p>
-                    <p>
-                        {Number(dish.rating)} <FontAwesomeIcon icon={faStar} />
+                    <p className='dish-rating'>
+                        {Number(dish.rating)}<FontAwesomeIcon icon={faStar} />
                     </p>
                 </div>
                 <div className='equipment-container'>

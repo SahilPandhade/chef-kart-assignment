@@ -1,15 +1,6 @@
 .menu-container{
     display: flex;
      flex-direction: column;
-    /*justify-content: space-around; */
-}
-.menu-items{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap:50px;
-    margin: 25px;
 }
 .menu-title{
     display: flex;
@@ -22,6 +13,14 @@
     margin-left: 28%;
     margin-top: 50px;
     max-height: 100px;
+}
+.menu-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+    margin: 25px;
 }
 .menu-button{
     background: black;

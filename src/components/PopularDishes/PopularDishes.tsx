@@ -1,7 +1,7 @@
 import React from 'react'
-import { popular_dishes } from '../constants/helper'
+import { popular_dishes } from '../../constants/helper'
 import './PopularDishes.css'
-import { PopularDishesProps } from '../constants/Types'
+import { PopularDishesProps } from '../../constants/Types'
 // import useDishesApi from '../hooks/useDishesApi'
 const PopularDishes = ({popularDishes,loading}:{popularDishes:PopularDishesProps[],loading:boolean}) => {
     // const {popularDishes,loading} = useDishesApi()

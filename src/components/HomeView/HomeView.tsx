@@ -3,11 +3,11 @@ import './HomeView.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendar, faClock } from '@fortawesome/free-solid-svg-icons'
 import { format } from 'date-fns';
-import { cuisines } from '../constants/helper';
-import { PopularDishesProps, cuisineProps, dishesProps } from '../constants/Types';
-import PopularDishes from './PopularDishes';
-import Menu from './Menu';
-import CartItems from './CartItems';
+import { cuisines } from '../../constants/helper';
+import { PopularDishesProps, cuisineProps, dishesProps } from '../../constants/Types';
+import PopularDishes from '../PopularDishes/PopularDishes';
+import Menu from '../Menu/Menu';
+import CartItems from '../CartItems/CartItems';
 const HomeView = () => {
     const [activeButton, setActiveButton] = useState<Number>()
     const currentDate = new Date();
@@ -21,8 +21,6 @@ const HomeView = () => {
             try {
                 const response = await fetch('https://8b648f3c-b624-4ceb-9e7b-8028b7df0ad0.mock.pstmn.io/dishes/v1/');
                 const data = await response.json();
-                console.log(data.dishes);
-                console.log(data.popularDishes);
                 setPopularDishes(data.popularDishes);
                 setDishes(data.dishes);
                 setLoading(false);

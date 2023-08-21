@@ -1,10 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import HomeView from './components/HomeView';
-import TitleBar from './components/TitleBar';
+import HomeView from './components/HomeView/HomeView';
+import TitleBar from './components/TitleBar/TitleBar';
 import { Route, Routes } from 'react-router-dom';
-import IngredientPage from './components/IngredientPage';
+import IngredientPage from './components/IngredientPage/IngredientPage';
 
 function App() {
   return (

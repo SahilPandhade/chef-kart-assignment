@@ -4,8 +4,8 @@ import React, { useEffect, useState } from 'react'
 import { CgSmartHomeRefrigerator } from 'react-icons/cg'
 import './IngredientPage.css'
 import { useNavigate } from 'react-router-dom'
-import { selectedDishProps } from '../constants/Types'
-import imgSrc from '../assets/ingredient-asset.jpg'
+import { selectedDishProps } from '../../constants/Types'
+import imgSrc from './ingredient-asset.jpg'
 const IngredientPage = () => {
     const [selectedDish, setSelectedDish] = useState<selectedDishProps>();
     const [loading, setLoading] = useState(true);
