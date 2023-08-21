@@ -6,6 +6,7 @@ import './IngredientPage.css'
 import { useNavigate } from 'react-router-dom'
 import { selectedDishProps } from '../../constants/Types'
 import imgSrc from './ingredient-asset.jpg'
+import IngredientList from '../IngredientList/IngredientList'
 const IngredientPage = () => {
     const [selectedDish, setSelectedDish] = useState<selectedDishProps>();
     const [loading, setLoading] = useState(true);
@@ -62,45 +63,9 @@ const IngredientPage = () => {
                     <p style={{ fontSize: '20px', fontWeight: '700' }}>Ingredients</p>
                     <p style={{ color: 'grey' }}>For 2 people</p>
                 </div>
-                <div className='ingredient-container'>
-                    <div className='vegetable-container'>
-                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                            <p style={{ fontSize: '20px', fontWeight: '700' }}>Vegetable</p>
-                            <button className='drop-down'><FontAwesomeIcon icon={faChevronDown} /></button>
-                        </div>
-                        <ul>
-                            {
-                                selectedDish?.ingredients.vegetables.map((vegetable) => {
-                                    return (
-                                        <li key={vegetable.name} className='vegetable-list-item'>
-                                            <p>{vegetable.name}</p>
-                                            <p>{vegetable.quantity}</p>
-                                        </li>
-                                    )
-
-                                })
-                            }
-                        </ul>
-                    </div>
-                    <div className='spices-container'>
-                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                            <p style={{ fontSize: '20px', fontWeight: '700' }}>Spices</p>
-                            <button className='drop-down'><FontAwesomeIcon icon={faChevronDown} /></button>
-                        </div>
-                        <ul>
-                            {
-                                selectedDish?.ingredients.spices.map((spice) => {
-                                    return (
-                                        <li key={spice.name} className='spice-list-item'>
-                                            <p>{spice.name}</p>
-                                            <p>{spice.quantity}</p>
-                                        </li>
-                                    )
-
-                                })
-                            }
-                        </ul>
-                    </div>
+                {selectedDish && <div className='ingredient-container'>
+                    <IngredientList title='Vegetable' items={selectedDish.ingredients.vegetables} />
+                    <IngredientList title='Spices' items={selectedDish.ingredients.spices} />
                     <div className='appliances-container'>
                         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                             <p style={{ fontSize: '20px', fontWeight: '700' }}>Appliances</p>
@@ -108,10 +73,10 @@ const IngredientPage = () => {
                         </div>
                         <ul className='appliance-list'>
                             {
-                                selectedDish?.ingredients.appliances.map((appliance) => {
+                                selectedDish.ingredients.appliances.map((appliance) => {
                                     return (
                                         <li className='appliance' key={appliance.name}>
-                                            <p style={{fontSize:'40px',margin:'0'}}><CgSmartHomeRefrigerator /></p>
+                                            <p style={{ fontSize: '40px', margin: '0' }}><CgSmartHomeRefrigerator /></p>
                                             {appliance.name}
                                         </li>
                                     )
@@ -120,7 +85,7 @@ const IngredientPage = () => {
                             }
                         </ul>
                     </div>
-                </div>
+                </div>}
             </div>
         </>
     )

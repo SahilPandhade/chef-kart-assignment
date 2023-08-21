@@ -81,16 +81,3 @@
     align-items: center;
     cursor: pointer;
 }
-
-.vegetable-list-item{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-
-.spice-list-item{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}

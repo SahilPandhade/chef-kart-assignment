@@ -1,0 +1,17 @@
+.item-list-box{
+    list-style: none;
+    padding: 0;
+}
+.drop-down{
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.list-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
