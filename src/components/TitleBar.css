@@ -1,0 +1,18 @@
+.titlebar{
+    background-color: white;
+    min-height: 50px;
+    max-height: 100px;
+    color: black;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:10px;
+}
+.back-button {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: none;
+    margin:10px
+}

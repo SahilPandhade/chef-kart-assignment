@@ -1,0 +1,65 @@
+.operating-time-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background:black;
+    height: 50px;
+    width: 100%;
+}
+.operating-time{
+    position: absolute;
+    display: flex;
+    bottom: -50px;
+    width: 720px;
+    height: 50px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; 
+    z-index: 1; 
+    padding: 10px;
+}
+.date-container{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+    border-right: 1px solid grey;
+}
+.business-hours-container{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap:5px;
+    justify-content: center;
+}
+.cuisine-list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 50px;
+}
+
+.cuisine{
+    margin: 20px;
+}
+.cuisine-button{
+    width: 90px;
+    height: 35px;
+    border: 1px solid grey;
+    color:grey;
+    background: white;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+.cuisine-button.active{
+    font-weight: bold;
+    color: orangered;
+    border-color: orangered;
+}
+/* .cuisine-button:hover{
+    font-weight: bold;
+    color: orangered;
+    border-color: orangered;
+} */

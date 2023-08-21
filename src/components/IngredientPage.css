@@ -1,0 +1,93 @@
+.ingredient-header-container{
+    margin:0 50px 0 50px;
+}
+.ingredient-title{
+    display: flex;
+    flex-direction: row;
+    max-height: 240px;
+}
+.ingredient-title-box{
+    flex: 1;
+    flex-wrap: wrap;
+}
+.ingredient-banner{
+    flex: 1;
+    object-fit: cover;
+    overflow: hidden;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    align-items: center;
+}
+.title-text{
+    font-size: 40px;
+    font-weight: 900;
+}
+.rating{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 6px;
+    background: #4bba3a;
+    border-radius: 5px;
+    font-size: 8px;
+    width: 45px;
+    max-width: 60px;
+    max-height: 20px;
+}
+.ingredient-description{
+    color: grey;
+}
+.timer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:10px;
+}
+.ingredient-box{
+    margin:25px 0 25px 0;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+.ingredient-container{
+    max-width: 100%;
+}
+.appliance-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap:20px;
+    list-style: none;
+}
+.appliance{
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.drop-down{
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.vegetable-list-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.spice-list-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
